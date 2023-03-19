@@ -59,6 +59,8 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 24px;
 }
 
 .section {
@@ -124,9 +126,6 @@ ul {
 /* ---------- Header ---------- */
 
 .header {
-  /* max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto; */
   border-bottom: 1px solid var(--cornflower-accent-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -159,7 +158,6 @@ ul {
 }
 
 .nav-list {
-  display: flex;
   margin-left: 76px;
   gap: 40px;
 }
@@ -186,7 +184,6 @@ ul {
 }
 
 .address-list {
-  display: flex;
   gap: 40px;
 }
 
@@ -236,16 +233,11 @@ ul {
 
 /* --- Our features section --- */
 
-.features-list {
-  display: flex;
-  gap: 24px;
-}
-
-.features-list .item {
+.features-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
-.features-list .item::before {
+.features-item::before {
   content: "";
   display: block;
   height: 112px;
@@ -257,23 +249,23 @@ ul {
   background-size: 64px 64px;
 }
 
-.features-list .item:nth-child(1)::before {
+.features-item:nth-child(1)::before {
   background-image: url(../images/antenna.svg);
 }
 
-.features-list .item:nth-child(2)::before {
+.features-item:nth-child(2)::before {
   background-image: url(../images/clock.svg);
 }
 
-.features-list .item:nth-child(3)::before {
+.features-item:nth-child(3)::before {
   background-image: url(../images/diagram.svg);
 }
 
-.features-list .item:nth-child(4)::before {
+.features-item:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
 }
 
-.features-list .section-title {
+.features-item .section-title {
   margin-bottom: 8px;
 }
 
@@ -283,34 +275,12 @@ ul {
   padding-top: 0;
 }
 
-.work-list {
-  display: flex;
-  gap: 24px;
-}
-
 /* --- Our Team Section--- */
-
-/* .button-class {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-image: url();
-  background-color: ;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
 .team .section-title,
 .team .section-text {
   text-align: center;
   margin-bottom: 8px;
-}
-
-.team-list {
-  display: flex;
-  gap: 24px;
 }
 
 .team {
@@ -328,15 +298,6 @@ ul {
   padding: 32px 16px;
   background-color: var(--main-color);
   border-radius: 0px 0px 4px 4px;
-}
-
-/* .section-title {
-  margin-bottom: 8px;
-} */
-
-.social-list {
-  display: flex;
-  gap: 24px;
 }
 
 .team-social {
@@ -360,6 +321,31 @@ ul {
 .team-social:focus,
 .team-social:active {
   background-color: var(--ocean-pressed-color);
+}
+
+/* --- Customers --- */
+
+.company-card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  color: var(--lightslate-subtle-color);
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.company-item {
+  width: 104px;
+  height: 56px;
+  fill: currentColor;
+}
+
+.company-card:hover,
+.company-card:focus,
+.company-card:active {
+  color: var(--ocean-pressed-color);
 }
 
 /* --- Footer --- */
@@ -413,7 +399,7 @@ ul {
 }
 
 .footer-navi .team-social {
-  background-color: var(--main-color), opacity: 0.1;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-navi .social-item {
@@ -421,10 +407,10 @@ ul {
   height: 24px;
 }
 
-.team-social:hover,
-.team-social:focus,
-.team-social:active {
-  background-color: var(--ocean-pressed-color);
+.footer-navi .team-social:hover,
+.footer-navi .team-social:focus,
+.footer-navi .team-social:active {
+  background-color: var(--green-success-color);
 }
 
 /* --- Portfolio page --- */
@@ -452,14 +438,11 @@ ul {
 }
 
 .button-list {
-  display: flex;
   justify-content: center;
-  gap: 24px;
   margin: 0 auto 72px;
 }
 
 .examples-list {
-  display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
 }
@@ -476,4 +459,10 @@ ul {
   padding: 32px 16px;
   border: 1px solid var(--cornflower-accent-color);
   border-top: none;
+}
+
+.example-item:hover {
+  border: 1px solid var(--cloud-light-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
