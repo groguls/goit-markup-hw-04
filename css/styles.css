@@ -300,7 +300,7 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-social {
+.social {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -317,9 +317,9 @@ ul {
   fill: currentColor;
 }
 
-.team-social:hover,
-.team-social:focus,
-.team-social:active {
+.social:hover,
+.social:focus,
+.social:active {
   background-color: var(--ocean-pressed-color);
 }
 
@@ -398,7 +398,7 @@ ul {
   gap: 16px;
 }
 
-.footer-navi .team-social {
+.footer-navi .social {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -407,9 +407,9 @@ ul {
   height: 24px;
 }
 
-.footer-navi .team-social:hover,
-.footer-navi .team-social:focus,
-.footer-navi .team-social:active {
+.footer-navi .social:hover,
+.footer-navi .social:focus,
+.footer-navi .social:active {
   background-color: var(--green-success-color);
 }
 
