@@ -211,7 +211,7 @@ ul {
   background-color: var(--navyblue-dark-color);
   background: linear-gradient(var(--grey-hero-color), var(--grey-hero-color)),
     url(../images/people-office.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -325,12 +325,17 @@ ul {
 
 /* --- Customers --- */
 
+.customers-item {
+  display: inherit;
+  flex-basis: calc((100% - 5 * 24px) / 6);
+  height: 88px;
+}
+
 .company-card {
-  display: inline-flex;
+  display: inherit;
   justify-content: center;
   align-items: center;
-  width: 168px;
-  height: 88px;
+  width: 100%;
   color: var(--lightslate-subtle-color);
   border: 1px solid;
   border-radius: 4px;
@@ -455,16 +460,19 @@ ul {
   flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
+.example-link {
+  display: block;
+}
+
 .example-card {
   padding: 32px 16px;
   border: 1px solid var(--cornflower-accent-color);
   border-top: none;
 }
 
-.example-item:hover,
-.example-item:focus,
-.example-item:active {
-  border: 1px solid var(--cloud-light-color);
+.example-link:hover,
+.example-link:focus,
+.example-link:active {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
